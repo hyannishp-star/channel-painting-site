@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Channel Painting Plus · Pintando profissionais mais fortes</title>
+<meta name="description" content="Para o pintor e o contractor brasileiro nos Estados Unidos que trabalha muito e ganha pouco. Como fazer, o que fazer, como administrar e como crescer, em português.">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/logo-apple-touch-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Public+Sans:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#14171B; --surface:#1D2126; --deep:#0F1216;
+  --ink:#F2F4F6; --ink-soft:#9AA3AD; --ink-mid:#C2CAD2;
+  --blue:#1E7BE0; --blue-deep:#0B5FC7; --gold:#F5A916; --gold-deep:#C9860A;
+  --rule:#2B3138;
+  --s1:.5rem; --s2:1rem; --s3:2rem; --s4:3.5rem; --s5:5.5rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Public Sans",system-ui,sans-serif;
+  font-size:1.125rem;line-height:1.62;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+.wrap{max-width:1180px;margin:0 auto;padding:0 1.25rem}
+.disp{font-family:Archivo,system-ui,sans-serif;font-variation-settings:"wdth" 74;font-weight:800;letter-spacing:-.01em;line-height:1}
+h1,h2,h3{margin:0}
+h2{font-size:clamp(2rem,4.6vw,3.25rem);line-height:1.02}
+section{padding:var(--s5) 0}
+.lede{color:var(--ink-mid);font-size:clamp(1.125rem,2vw,1.3125rem);line-height:1.6;max-width:60ch;margin:1rem 0 0}
+
+/* marcação do que depende do Roberto: só existe na maquete */
+.pend{display:inline-block;margin:.35rem 0 0;padding:.2rem .5rem;border:1px dashed var(--gold);color:var(--gold);
+  font-size:.8125rem;font-weight:700;line-height:1.35;border-radius:3px;background:rgba(245,169,22,.08)}
+
+.tape{background:var(--blue);color:#fff;display:inline-block;padding:.3rem .7rem;font-family:Archivo,sans-serif;
+  font-variation-settings:"wdth" 80;font-weight:700;font-size:.9375rem;letter-spacing:.02em;transform:rotate(-1.1deg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:.9rem 1.6rem;border-radius:3px;
+  font-weight:700;font-size:1.0625rem;text-decoration:none;border:2px solid transparent;font-family:inherit;cursor:pointer;
+  transition:background-color .15s,color .15s,border-color .15s}
+.btn-p{background:var(--gold);color:#14171B}
+.btn-p:hover{background:var(--gold-deep)}
+.btn-s{background:transparent;color:var(--ink);border-color:#4A525C}
+.btn-s:hover{border-color:var(--ink)}
+
+/* topo */
+header.top{background:var(--deep);position:sticky;top:0;z-index:40;border-bottom:1px solid var(--rule)}
+header.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.25rem 1.5rem}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;padding:.65rem 0}
+.logo img{height:34px;width:auto}
+.logo .nm{font-family:Archivo,sans-serif;font-variation-settings:"wdth" 76;font-weight:800;font-size:1.25rem;line-height:1}
+.logo .plus{display:inline-block;background:var(--gold);color:#14171B;font-size:.6875rem;font-weight:800;
+  letter-spacing:.06em;padding:1px 5px;border-radius:2px;vertical-align:.22em;margin-left:2px}
+header.top nav{display:flex;flex-wrap:wrap;gap:0 1.25rem}
+header.top nav a{color:var(--ink-mid);text-decoration:none;font-size:1rem;font-weight:600;min-height:48px;
+  display:flex;align-items:center;border-bottom:3px solid transparent}
+header.top nav a:hover{color:#fff;border-bottom-color:var(--gold)}
+
+/* hero */
+.hero{padding:var(--s4) 0 var(--s5)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:var(--s3);align-items:center}
+@media(min-width:960px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:var(--s4)}}
+.hero h1{font-size:clamp(2.5rem,6.4vw,4.75rem);margin:1.25rem 0 0}
+.hero h1 span{display:block;color:var(--gold)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:var(--s3)}
+.hero .apoio{margin-top:var(--s3);padding-top:var(--s2);border-top:1px solid var(--rule);color:var(--ink-soft);font-size:1rem}
+.hero .apoio b{display:block;color:var(--ink);font-family:Archivo,sans-serif;font-variation-settings:"wdth" 84;
+  font-weight:700;letter-spacing:.06em;margin-top:.35rem}
+.hero-logo img{width:100%;height:auto;max-width:520px;margin-inline:auto}
+@media(max-width:959px){.hero-logo{order:-1}.hero-logo img{max-width:360px}}
+
+/* dores: lista de conferência, o leitor se reconhece */
+.dores{background:var(--surface);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.dor-lista{list-style:none;margin:var(--s3) 0 0;padding:0;display:grid;grid-template-columns:1fr;gap:0 var(--s4)}
+@media(min-width:820px){.dor-lista{grid-template-columns:1fr 1fr}}
+.dor-lista li{display:grid;grid-template-columns:28px 1fr;gap:.9rem;padding:1.35rem 0;border-bottom:1px solid var(--rule)}
+.caixa{width:24px;height:24px;border:2px solid var(--gold);border-radius:3px;margin-top:.2rem}
+.dor-lista h3{font-family:Archivo,sans-serif;font-variation-settings:"wdth" 82;font-weight:800;font-size:1.375rem;line-height:1.2}
+.dor-lista p{margin:.35rem 0 0;color:var(--ink-mid)}
+.fecho{margin:var(--s3) 0 0;font-size:1.25rem;font-weight:600;max-width:52ch}
+.fecho b{color:var(--gold)}
+
+/* qual e o seu trabalho */
+.hero .oficios{margin:1rem 0 0;color:var(--ink-mid);font-size:.9375rem;font-weight:600;letter-spacing:.02em}
+.of-grid{display:grid;grid-template-columns:1fr;gap:var(--s3) var(--s4);margin-top:var(--s3)}
+@media(min-width:820px){.of-grid{grid-template-columns:1fr 1fr}}
+.of{border-top:3px solid var(--blue);padding-top:1rem}
+.of.reserva{border-top-style:dashed;border-top-color:#4A525C}
+.of .tag{font-family:Archivo,sans-serif;font-variation-settings:"wdth" 84;font-weight:700;font-size:.875rem;letter-spacing:.05em;color:var(--gold)}
+.of h3{font-family:Archivo,sans-serif;font-variation-settings:"wdth" 80;font-weight:800;font-size:1.5rem;line-height:1.15;margin:.35rem 0 0}
+.of p{margin:.45rem 0 0;color:var(--ink-mid)}
+
+/* virada */
+.virada .grid{display:grid;grid-template-columns:1fr;gap:var(--s3)}
+@media(min-width:900px){.virada .grid{grid-template-columns:1fr 1fr;gap:var(--s4)}}
+.virada p{margin:0 0 1rem;max-width:56ch}
+.virada .forte{font-size:1.3125rem;font-weight:700;color:#fff}
+.caixa-o-que{background:var(--surface);border-left:5px solid var(--blue);padding:clamp(1.25rem,3vw,2rem)}
+.caixa-o-que h3{font-family:Archivo,sans-serif;font-variation-settings:"wdth" 80;font-weight:800;font-size:1.625rem;margin-bottom:1rem}
+.seq{font-family:Archivo,sans-serif;font-variation-settings:"wdth" 84;font-weight:700;letter-spacing:.06em;color:var(--gold);margin-top:1.25rem}
+
+/* pilares */
+.pilares{background:var(--deep)}
+.pil-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:var(--s3)}
+@media(min-width:700px){.pil-grid{grid-template-columns:1fr 1fr}}
+.pil{background:var(--surface);padding:1.75rem 1.5rem}
+.pil .n{font-family:Archivo,sans-serif;font-variation-settings:"wdth" 74;font-weight:800;font-size:2.25rem;color:var(--blue);line-height:1}
+.pil h3{font-family:Archivo,sans-serif;font-variation-settings:"wdth" 80;font-weight:800;font-size:1.625rem;margin:.6rem 0 0}
+.pil .sub{font-family:Archivo,sans-serif;font-variation-settings:"wdth" 84;font-weight:700;font-size:.875rem;letter-spacing:.05em;color:var(--gold);margin:.2rem 0 1.1rem}
+.pil dl{margin:0}
+.pil dt{font-weight:700;color:var(--ink-soft);font-size:.875rem;letter-spacing:.04em}
+.pil dd{margin:.15rem 0 .9rem}
+.pil dd.ganho{color:#fff;font-weight:600;margin-bottom:0}
+
+/* pra quem */
+.quem .cols{display:grid;grid-template-columns:1fr;gap:var(--s3);margin-top:var(--s3)}
+@media(min-width:820px){.quem .cols{grid-template-columns:1fr 1fr}}
+.quem h3{font-family:Archivo,sans-serif;font-variation-settings:"wdth" 82;font-weight:800;font-size:1.375rem;margin-bottom:.75rem}
+.quem ul{margin:0;padding:0;list-style:none}
+.quem li{padding:.75rem 0 .75rem 2rem;border-bottom:1px solid var(--rule);position:relative}
+.quem .sim li::before{content:"";position:absolute;left:0;top:1.05rem;width:14px;height:8px;border-left:3px solid var(--gold);border-bottom:3px solid var(--gold);transform:rotate(-45deg)}
+.quem .nao li{color:var(--ink-soft)}
+.quem .nao li::before,.quem .nao li::after{content:"";position:absolute;left:1px;top:1.25rem;width:16px;height:3px;background:#6B7480}
+.quem .nao li::before{transform:rotate(45deg)}.quem .nao li::after{transform:rotate(-45deg)}
+
+/* credibilidade */
+.cred{background:var(--surface);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.comp{display:grid;grid-template-columns:1fr;gap:var(--s2) var(--s3);margin-top:var(--s3)}
+@media(min-width:820px){.comp{grid-template-columns:1fr 1fr}}
+.comp div{border-top:3px solid var(--blue);padding-top:.9rem}
+.comp h3{font-family:Archivo,sans-serif;font-variation-settings:"wdth" 84;font-weight:700;font-size:1.25rem}
+.comp p{margin:.3rem 0 0;color:var(--ink-mid)}
+.historias{margin-top:var(--s4);padding:clamp(1.25rem,3vw,2rem);border:1px dashed #4A525C}
+.historias h3{font-family:Archivo,sans-serif;font-variation-settings:"wdth" 82;font-weight:800;font-size:1.5rem}
+
+/* chamada final */
+.final{background:var(--blue-deep);text-align:left}
+.final h2{color:#fff}
+.final h2 span{display:block;color:#FFD27A}
+.final p{color:#DDE9FA;max-width:52ch;margin:1rem 0 0;font-size:1.1875rem}
+.final .cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:var(--s3)}
+.final .btn-s{color:#fff;border-color:#9FC3EE}
+.final small{display:block;margin-top:1rem;color:#C6DAF3;font-size:.9375rem}
+
+/* perguntas */
+.faq-lista{margin-top:var(--s3);max-width:820px;border-top:1px solid var(--rule)}
+.faq-lista details{border-bottom:1px solid var(--rule)}
+.faq-lista summary{cursor:pointer;list-style:none;padding:1.15rem 2.5rem 1.15rem 0;position:relative;
+  font-family:Archivo,sans-serif;font-variation-settings:"wdth" 84;font-weight:700;font-size:1.25rem}
+.faq-lista summary::-webkit-details-marker{display:none}
+.faq-lista summary::after{content:"+";position:absolute;right:.25rem;top:.85rem;font-size:1.75rem;color:var(--gold);font-weight:400}
+.faq-lista details[open] summary::after{content:"−"}
+.faq-lista details p{margin:0 0 1.2rem;color:var(--ink-mid);max-width:64ch}
+
+footer{background:var(--deep);border-top:6px solid var(--gold);color:var(--ink-soft);padding:var(--s4) 0 var(--s3);font-size:.9375rem}
+footer .marca{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
+footer .marca img{height:40px;width:auto}
+footer .marca b{color:#fff;font-family:Archivo,sans-serif;font-variation-settings:"wdth" 78;font-weight:800;font-size:1.25rem}
+.selo{margin-top:var(--s3);padding-top:var(--s2);border-top:1px solid var(--rule);font-size:.875rem;line-height:1.6;color:#79828C}
+.selo .tg{display:inline-block;border:1px solid #39414A;padding:.3rem .55rem;color:var(--ink-mid);font-weight:700;margin-bottom:.6rem;border-radius:3px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/"><img src="assets/logo-mark.png" alt=""><span class="nm">Channel Painting <span class="plus">PLUS</span></span></a>
+    <nav aria-label="Principal">
+      <a href="#dores">Pra você</a>
+      <a href="#oficio">Seu ofício</a>
+      <a href="#virada">Como funciona</a>
+      <a href="#pilares">Pilares</a>
+      <a href="#perguntas">Perguntas</a>
+      <a href="#receber">Receber</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tape">PINTANDO PROFISSIONAIS MAIS FORTES</span>
+      <p class="oficios">Pintura · Carpintaria · Drywall · Siding e telhado · Piso e azulejo · Reforma</p>
+      <h1 class="disp">Você trabalha de sol a sol.<span>E no fim do mês o dinheiro some.</span></h1>
+      <p class="lede">Pintor, carpinteiro, drywall, siding, telhado. O ofício muda. A dor é a mesma: ninguém te ensinou a cobrar, a organizar e a crescer aqui nos Estados Unidos. O Channel Painting Plus ensina, em português, do jeito que se fala no job.</p>
+      <div class="cta">
+        <a class="btn btn-p" href="#receber">Quero receber o conteúdo</a>
+        <a class="btn btn-s" href="#quem">Ver se é pra mim</a>
+      </div>
+      <p class="apoio">Do Brasil para quem pinta nos Estados Unidos.<br>Nasceu na pintura. O Plus é pra todo profissional que trabalha com casa.<b>Aprenda · Aplique · Administre · Evolua</b></p>
+    </div>
+    <div class="hero-logo"><img src="assets/logo-lockup.png" alt="Channel Painting Plus" width="937" height="893"></div>
+  </div>
+</section>
+
+<section class="dores" id="dores">
+  <div class="wrap">
+    <h2 class="disp">Alguma dessas é sua?</h2>
+    <p class="lede">Não importa se você pinta, bate prego ou sobe no telhado. Estas aparecem pra todo mundo.</p>
+    <ul class="dor-lista">
+      <li><span class="caixa" aria-hidden="true"></span><div><h3>O dinheiro some</h3><p>Você trabalha de segunda a sábado. Às vezes domingo. Chega o fim do mês e você não sabe pra onde foi.</p></div></li>
+      <li><span class="caixa" aria-hidden="true"></span><div><h3>Cobra barato com medo de perder</h3><p>Na hora de dar o preço, aperta. Você baixa pra garantir o job e depois trabalha quase de graça.</p></div></li>
+      <li><span class="caixa" aria-hidden="true"></span><div><h3>O estimate que não fecha</h3><p>Você vai, mede, manda o preço. O cliente americano some e você nunca descobre por quê.</p></div></li>
+      <li><span class="caixa" aria-hidden="true"></span><div><h3>O job que volta</h3><p>Terminou, recebeu, foi embora. Meses depois o cliente liga reclamando, e você volta sem cobrar.</p></div></li>
+      <li><span class="caixa" aria-hidden="true"></span><div><h3>Medo da papelada</h3><p>Seguro, imposto, LLC. Parece outro mundo. O medo de errar faz você deixar tudo pra depois.</p></div></li>
+      <li><span class="caixa" aria-hidden="true"></span><div><h3>O inverno sem job</h3><p>Seu trabalho vem de indicação. Quando o frio chega, o telefone para de tocar.</p></div></li>
+      <li><span class="caixa" aria-hidden="true"></span><div><h3>Anos trabalhando pra outro</h3><p>Você faz melhor que muita gente que tem empresa. Mesmo assim continua pegando sub, sem ver a saída.</p></div></li>
+    </ul>
+    <p class="fecho">Se você se reconheceu em duas ou mais, continue lendo. <b>Tem um motivo pra isso acontecer.</b></p>
+  </div>
+</section>
+
+<section class="oficio" id="oficio">
+  <div class="wrap">
+    <h2 class="disp">Qual é o seu trabalho?</h2>
+    <p class="lede">Cada ofício tem uma dor que só quem faz conhece.</p>
+    <div class="of-grid">
+      <div class="of"><span class="tag">Pintura</span><h3>Todo mundo acha que sabe pintar</h3><p>O cliente compara o seu preço com o de quem cobra metade. Aí o serviço mal feito vira problema, e a fama ruim sobra pra todos.</p></div>
+      <div class="of"><span class="tag">Carpintaria e acabamento</span><h3>O serviço que cresce no meio do job</h3><p>Você abre e encontra mais problema do que o combinado. O cliente quer pagar o preço do começo.</p></div>
+      <div class="of"><span class="tag">Drywall</span><h3>Quando fica bom, ninguém vê</h3><p>Seu trabalho some debaixo do trabalho do próximo. Se algo aparece depois, a culpa volta pra você. E o atraso de quem veio antes cai no seu prazo.</p></div>
+      <div class="of"><span class="tag">Siding e telhado</span><h3>O tempo e o corpo cobram a conta</h3><p>Dia de chuva é dia sem ganhar. O trabalho é pesado e no alto. E se alguém se machuca, você não sabe quem paga.</p></div>
+      <div class="of"><span class="tag">Piso e azulejo</span><h3>O erro que não tem volta</h3><p>Um detalhe fora do lugar fica ali pra sempre. O cliente vê todo dia, e você ouve falar dele por muito tempo.</p></div>
+      <div class="of"><span class="tag">Reforma e handyman</span><h3>Faz de tudo e não cobra por nada</h3><p>Cada visita vira mais um favor. Um conserto puxa outro, e no fim o dia inteiro valeu pouco.</p></div>
+    </div>
+    <p class="fecho">Seu ofício não está aqui? <b>As dores de cima continuam sendo suas.</b></p>
+  </div>
+</section>
+
+<section class="virada" id="virada">
+  <div class="wrap">
+    <h2 class="disp">O problema não está no seu pincel. Nem no seu martelo.</h2>
+    <div class="grid" style="margin-top:var(--s3)">
+      <div>
+        <p>Você aprendeu o seu ofício na prática. Ninguém te deu aula de como cobrar. De como falar com o cliente. De como organizar uma empresa ou ter trabalho o ano inteiro.</p>
+        <p>No Brasil isso já era difícil. Aqui, com outra língua e outras regras, fica mais difícil ainda.</p>
+        <p>O resultado é conhecido. O profissional bom trabalha dobrado e fica no mesmo lugar.</p>
+        <p class="forte">Não é falta de talento. É falta de caminho.</p>
+      </div>
+      <div class="caixa-o-que">
+        <h3>O que é o Channel Painting Plus</h3>
+        <p>É esse caminho, organizado.</p>
+        <p>Um canal em português para o profissional brasileiro que trabalha com casa nos Estados Unidos. Nasceu na pintura. O Plus é pra quem pinta e pra quem trabalha do lado: carpintaria, drywall, siding, telhado, piso, reforma.</p>
+        <p>Conteúdo curto e direto sobre o que ninguém ensina no job: fazer bem feito, escolher certo, administrar e crescer.</p>
+        <p style="margin-bottom:0">Uma coisa de cada vez. Na ordem certa.</p>
+        <p class="seq">Aprenda · Aplique · Administre · Evolua</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pilares" id="pilares">
+  <div class="wrap">
+    <h2 class="disp">Quatro pilares. Cada um resolve uma dor.</h2>
+    <p class="lede">Quem pula a gestão fica bom no ofício e apertado no fim do ano.</p>
+    <div class="pil-grid">
+      <div class="pil"><span class="n">01</span><h3>Como fazer</h3><p class="sub">Passo a passo</p>
+        <dl><dt>A DOR</dt><dd>Serviço que volta com reclamação, e cada pessoa do crew fazendo de um jeito.</dd>
+        <dt>O QUE VOCÊ GANHA</dt><dd class="ganho">A ordem certa do serviço, do começo à entrega, explicada de um jeito simples. Pra fazer uma vez, ensinar a equipe e não precisar voltar.</dd></dl></div>
+      <div class="pil"><span class="n">02</span><h3>O que fazer</h3><p class="sub">Materiais e técnicas</p>
+        <dl><dt>A DOR</dt><dd>Dúvida na hora de comprar e dinheiro gasto em material ou ferramenta que não precisava.</dd>
+        <dt>O QUE VOCÊ GANHA</dt><dd class="ganho">Critério pra escolher o que vale o dinheiro no seu ofício, sem depender do palpite de ninguém.</dd></dl></div>
+      <div class="pil"><span class="n">03</span><h3>Como administrar</h3><p class="sub">Gestão e preços</p>
+        <dl><dt>A DOR</dt><dd>Não saber quanto cobrar e ter medo de seguro, imposto e LLC.</dd>
+        <dt>O QUE VOCÊ GANHA</dt><dd class="ganho">Um jeito claro de chegar no seu preço e de entender o que a sua empresa precisa pra andar certa.</dd></dl></div>
+      <div class="pil"><span class="n">04</span><h3>Mais resultados</h3><p class="sub">Crescimento profissional</p>
+        <dl><dt>A DOR</dt><dd>Depender de indicação, parar no inverno, trabalhar anos pra outro.</dd>
+        <dt>O QUE VOCÊ GANHA</dt><dd class="ganho">Um caminho pra ser encontrado, fechar mais estimate e saber a hora de dar o próximo passo.</dd></dl></div>
+    </div>
+  </div>
+</section>
+
+<section class="quem" id="quem">
+  <div class="wrap">
+    <h2 class="disp">Pra quem é o Channel Painting Plus</h2>
+    <div class="cols">
+      <div class="sim"><h3>É pra você se</h3><ul>
+        <li>Trabalha com casa nos Estados Unidos: pintura, carpintaria, drywall, siding, telhado, piso, azulejo ou reforma.</li>
+        <li>Chegou há pouco, pega job de sub e trabalha muito pra ganhar pouco.</li>
+        <li>Já tem o seu crew e sente que parou de crescer.</li>
+        <li>Quer abrir a sua LLC e parar de trabalhar pra outro.</li></ul></div>
+      <div class="nao"><h3>Não é pra você se</h3><ul>
+        <li>Procura fórmula de enriquecer rápido.</li>
+        <li>Acha que não tem mais nada pra aprender.</li>
+        <li>Quer atalho pra cortar caminho no serviço ou na papelada.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="cred" id="compromisso">
+  <div class="wrap">
+    <h2 class="disp">O canal é novo. Por isso mostramos como ele é feito.</h2>
+    <p class="lede">Não vamos te mostrar número bonito nem depoimento que não existe. Vamos te mostrar o compromisso.</p>
+    <div class="comp">
+      <div><h3>Em português, com a palavra do job</h3><p>Explicado em português, com o termo em inglês que você ouve na obra.</p></div>
+      <div><h3>Curto, pra ler no celular</h3><p>Dá pra ler no intervalo do almoço, sem enrolação.</p></div>
+      <div><h3>Revisado antes de sair</h3><p>Se não temos certeza, não publicamos.</p></div>
+      <div><h3>Sem propaganda disfarçada de dica</h3><p>O canal não empurra produto, marca nem serviço pago.</p></div>
+    </div>
+    <div class="comp" style="margin-top:var(--s3)">
+      <div><h3>Cada ofício com quem é do ofício</h3><p>Conteúdo de carpintaria, drywall ou telhado é feito ou conferido por quem trabalha com isso.</p></div>
+      <div><h3>Quem está por trás</h3><p>Um pintor brasileiro com empresa própria nos Estados Unidos desde 2002. Tudo o que está aqui foi aprendido no job, não em livro.</p></div>
+    </div>
+    <div class="historias">
+      <h3>Histórias de profissionais · em breve</h3>
+      <p style="color:var(--ink-mid);max-width:62ch">Aqui vão entrar histórias de profissionais brasileiros que trabalham com casa e passaram por essas dores. Sempre com nome, cidade, ofício e autorização de quem contou. Nada inventado.</p>
+      <a class="btn btn-s" href="mailto:contato@channelpaint.com?subject=Quero%20contar%20a%20minha%20hist%C3%B3ria&body=Meu%20nome%3A%20%0AMeu%20of%C3%ADcio%3A%20%0ACidade%20e%20estado%3A%20%0AMinha%20hist%C3%B3ria%20em%20poucas%20linhas%3A%20">Quero contar a minha história</a>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="receber">
+  <div class="wrap">
+    <h2 class="disp">Você já domina o seu ofício.<span>Agora aprenda o resto.</span></h2>
+    <p>Conteúdo novo toda semana, direto no seu e-mail. Curto, em português, sobre as dores desta página.</p>
+    <div class="cta">
+      <a class="btn btn-p" href="mailto:contato@channelpaint.com?subject=Quero%20receber%20o%20conte%C3%BAdo&body=Meu%20nome%3A%20%0AMeu%20of%C3%ADcio%20(pintor%2C%20carpinteiro%2C%20drywall%2C%20telhado%2C%20outro)%3A%20%0ACidade%20e%20estado%3A%20">Quero receber por e-mail</a>
+    </div>
+        <small>Você sai quando quiser. Seu contato não é vendido nem passado pra ninguém.</small>
+  </div>
+</section>
+
+<section id="perguntas">
+  <div class="wrap">
+    <h2 class="disp">Perguntas frequentes</h2>
+    <div class="faq-lista">
+      <details open><summary>É pago?</summary><p>Receber o conteúdo não custa nada.</p></details>
+      <details><summary>Não sou pintor. Serve pra mim?</summary><p>Serve. O canal nasceu na pintura, mas preço, cliente americano, papelada e inverno parado são dores de todo profissional que trabalha com casa. O Plus existe pra você.</p></details>
+      <details><summary>Por que o nome tem "Painting"?</summary><p>Porque foi na pintura que tudo começou. O Plus é o que vai além do pincel: os outros ofícios da casa e o lado do negócio que ninguém ensina.</p></details>
+      <details><summary>Vai ter conteúdo específico do meu ofício?</summary><p>A parte de gestão, preço e crescimento serve pra todos desde já. Conteúdo próprio de cada ofício entra aos poucos, sempre com quem é do ofício.</p></details>
+      <details><summary>Preciso falar inglês?</summary><p>Não. Tudo é em português. As palavras que você ouve no job, como estimate, crew e LLC, aparecem em inglês e explicadas.</p></details>
+      <details><summary>Serve pra quem está começando?</summary><p>Serve. O conteúdo começa do básico e vai subindo. Quem pega job de sub hoje encontra por onde começar.</p></details>
+      <details><summary>Já tenho meu crew. Tem algo pra mim?</summary><p>Tem. Boa parte do conteúdo é sobre preço, organização e crescimento. É justamente onde quem já tem crew costuma travar.</p></details>
+      <details><summary>Vocês abrem a LLC pra mim?</summary><p>Não. O canal explica em linguagem simples o que existe e o que perguntar. Abertura de empresa, seguro e imposto devem ser feitos com um contador ou profissional habilitado no seu estado.</p></details>
+      <details><summary>Com que frequência eu recebo?</summary><p>Toda semana, por e-mail. Você sai quando quiser.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="marca"><img src="assets/logo-mark.png" alt=""><b>Channel Painting Plus</b></div>
+    Do Brasil para quem pinta nos Estados Unidos. Conhecimento que transforma.
+    <div class="selo">© 2026 Channel Painting Plus · <a href="mailto:contato@channelpaint.com" style="color:inherit">contato@channelpaint.com</a></div>
+  </div>
+</footer>
+</body>
+</html>
