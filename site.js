@@ -21,6 +21,34 @@
   });
 
 
+  // portal: as três fitas ligam o círculo do logo às três portas
+  var portal = document.querySelector('.portal');
+  if (portal) {
+    var svg = portal.querySelector('.fitas'), caminhos = portal.querySelectorAll('.fita-linha'),
+        circ = portal.querySelector('.circulo'), portas = portal.querySelectorAll('.porta a'),
+        quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var desenha = function () {
+      var base = portal.querySelector('.portal-in').getBoundingClientRect(), c = circ.getBoundingClientRect();
+      var sx = c.left + c.width / 2 - base.left, sy = c.top + c.height * 0.82 - base.top;
+      portas.forEach(function (a, i) {
+        var r = a.getBoundingClientRect(), ex = r.left + r.width / 2 - base.left, ey = r.top - base.top + 18, dy = ey - sy;
+        caminhos[i].setAttribute('d', 'M' + sx + ',' + sy + ' C' + sx + ',' + (sy + dy * 0.55) + ' ' + ex + ',' + (ey - dy * 0.45) + ' ' + ex + ',' + ey);
+      });
+    };
+    desenha();
+    if (!quieto) {
+      portal.classList.add('anima');
+      caminhos.forEach(function (p) { var L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L; });
+      requestAnimationFrame(function () { requestAnimationFrame(function () {
+        portal.classList.add('vai'); caminhos.forEach(function (p) { p.style.strokeDashoffset = 0; });
+      }); });
+      setTimeout(function () { caminhos.forEach(function (p) { p.style.strokeDasharray = 'none'; }); }, 2000);
+    }
+    var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(desenha, 120); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(desenha);
+    window.addEventListener('load', desenha);
+  }
+
   // REDES DO CANAL: YouTube e Instagram ainda não existem. Ponto único para ligar depois:
   // preencher as URLs abaixo e criar os botões no rodapé (index.html, mural.html, obrigado.html).
   var REDES = { youtube: '', instagram: '' };
