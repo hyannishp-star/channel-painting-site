@@ -60,6 +60,9 @@
       var h = a.getAttribute('href'); if (/^https?:/.test(h)) return;
       var p = h.split('#'); a.setAttribute('href', p[0] + '?lang=' + LANG + (p[1] ? '#' + p[1] : ''));
     });
+    // o texto traduzido muda a altura da página depois do pulo do navegador: volta para a seção pedida no link (#tabela, #marcas...)
+    var alvo = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (alvo) setTimeout(function () { alvo.scrollIntoView({ behavior: "instant" }); }, 0);
   }
   LANG = escolhido();
   if (LANG === 'pt') inicia();

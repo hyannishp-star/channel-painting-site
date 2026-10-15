@@ -505,6 +505,8 @@ footer .lockup.pq .lk-sim.lk-circ{width:64px;height:64px}
 .l5-cor{display:block;height:110px;background:var(--c)}
 .l5-txt{display:block;padding:.6rem .35rem 0;font:800 1rem/1.15 Archivo,sans-serif;font-variation-settings:"wdth" 84}
 .leque5-dica{text-align:center;margin-top:1rem;color:var(--texto-2);font-size:.9375rem}
+.leque5 li{position:relative}.leque5 li:nth-child(2),.leque5 li:nth-child(4){z-index:1}.leque5 li:nth-child(3){z-index:2}.leque5 li:hover,.leque5 li:focus-within{z-index:3}
+@media(min-width:760px){.leque5 .l5-txt{padding:.6rem 14px 0}}
 @media(max-width:759px){
   .leque5{flex-direction:column;align-items:stretch;padding:0;gap:10px}
   .leque5 li{margin:0;transform:none;flex:none}
