@@ -477,3 +477,18 @@ footer .lockup.pq .lk-sim.lk-circ{width:64px;height:64px}
 .logo-md{border-radius:50%;box-shadow:0 0 0 6px var(--primer),0 0 0 9px var(--prata),0 24px 50px -18px rgba(30,35,41,.55)}
 .obrigado .ob-placa{padding:0;background:transparent}
 .logo-ci{width:100%}
+
+/* ===== Seletor de idioma (PT · EN · ES) ===== */
+.idiomas{display:flex;align-items:center;gap:.15rem;margin-left:.75rem;flex:none}
+.idiomas button{min-width:36px;min-height:36px;padding:0 .4rem;border:1px solid transparent;border-radius:3px;background:transparent;color:var(--texto-2);font:700 .8125rem/1 "Public Sans",sans-serif;letter-spacing:.04em;cursor:pointer}
+.idiomas button:hover{color:var(--grafite);border-color:rgba(30,35,41,.25)}
+.idiomas button[aria-pressed="true"]{background:var(--grafite);color:#fff}
+.idiomas-sep{color:var(--prata)}
+.idiomas-menu{display:none}
+@media(max-width:899px){
+  .nav .wrap>.idiomas{margin-left:.35rem}
+  .idiomas-menu{display:block;padding:.75rem .25rem .25rem;border-top:1px solid rgba(168,176,183,.45)}
+  .idiomas-menu .idiomas{margin:0}
+  .idiomas-menu .idiomas button{min-width:48px;min-height:44px;font-size:.9375rem}
+}
+@media(max-width:419px){.nav .wrap>.idiomas button{min-width:30px;padding:0 .2rem}.nav .wrap>.idiomas .idiomas-sep{display:none}.nav .wrap{gap:.4rem}}

@@ -25,54 +25,54 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,500..900&family=Public+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="estilo.css">
 </head>
-<body class="abre">
-<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<body data-i18n-pagina="contato" class="abre">
+<a class="pular" href="#conteudo" data-i18n="t.pular-para-o-conteudo">Pular para o conteúdo</a>
 <header class="nav"><div class="wrap">
   <a class="lockup pq" href="index.html" aria-label="Painter Channel Plus, página inicial"><img class="lk-sim lk-circ" src="fotos/logo-pc-circulo-128.png" srcset="fotos/logo-pc-circulo-128.png 1x, fotos/logo-pc-circulo-192.png 1.5x" alt="" width="128" height="128"><span class="lk-txt" aria-hidden="true"><span class="lk-1">Painter</span><span class="lk-2">Channel<span class="lk-plus">Plus</span></span></span></a>
-  <nav class="menu" aria-label="Principal"><ul class="menu-simples"><li><a href="mural.html">Painters</a></li><li><a href="dicas.html">Questions</a></li><li><a href="contato.html">Contact</a></li></ul></nav>
+  <nav class="menu" aria-label="Principal" data-i18n-attr="aria-label:attr.principal"><ul class="menu-simples"><li><a href="mural.html">Painters</a></li><li><a href="dicas.html">Questions</a></li><li><a href="contato.html">Contact</a></li></ul></nav>
 </div></header>
-<main id="conteudo"><section class="cab-pagina" aria-labelledby="t1"><div class="wrap"><h1 id="t1">Fale com a gente</h1><p class="medida">Opinião, crítica ou uma dica melhor que a minha. Pelo formulário ou pelo WhatsApp.</p></div></section><section class="secao" id="fale" aria-labelledby="t-fale"><div class="wrap">
-  <div class="secao-cab"><h2 id="t-fale">Sua opinião</h2><p class="medida">Escreve do seu jeito. Crítica também conta.</p></div>
+<main id="conteudo"><section class="cab-pagina" aria-labelledby="t1"><div class="wrap"><h1 id="t1" data-i18n="t.fale-com-a-gente">Fale com a gente</h1><p class="medida" data-i18n="t.opiniao-critica-ou-uma-dica-melhor">Opinião, crítica ou uma dica melhor que a minha. Pelo formulário ou pelo WhatsApp.</p></div></section><section class="secao" id="fale" aria-labelledby="t-fale"><div class="wrap">
+  <div class="secao-cab"><h2 id="t-fale" data-i18n="t.sua-opiniao">Sua opinião</h2><p class="medida" data-i18n="t.escreve-do-seu-jeito-critica-tambem">Escreve do seu jeito. Crítica também conta.</p></div>
   <div class="fale">
-    <form class="valida" action="https://formsubmit.co/hyannishp@gmail.com" method="POST" novalidate aria-label="Sua opinião">
-      <input type="hidden" name="_subject" value="[Painter Channel Plus] Opinião"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://painterchannel.com/obrigado.html"><div class="pote" aria-hidden="true"><label>Não preencha este campo<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+    <form class="valida" action="https://formsubmit.co/hyannishp@gmail.com" method="POST" novalidate aria-label="Sua opinião" data-i18n-attr="aria-label:t.sua-opiniao">
+      <input type="hidden" name="_subject" value="[Painter Channel Plus] Opinião"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://painterchannel.com/obrigado.html"><div class="pote" aria-hidden="true"><label><span data-i18n="t.nao-preencha-este-campo">Não preencha este campo</span><input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
       <div class="par">
-        <div class="campo"><label for="op-nome">Nome</label><input id="op-nome" name="nome" type="text" autocomplete="name" required data-erro="Escreva o seu nome."><span class="erro" aria-live="polite"></span></div>
-        <div class="campo"><label for="op-email">E-mail</label><input id="op-email" name="email" type="email" autocomplete="email" required data-erro="Escreva um e-mail válido, ex: nome@gmail.com."><span class="erro" aria-live="polite"></span></div>
+        <div class="campo"><label for="op-nome" data-i18n="t.nome">Nome</label><input id="op-nome" name="nome" type="text" autocomplete="name" required data-erro="Escreva o seu nome." data-i18n-attr="data-erro:attr.escreva-o-seu-nome"><span class="erro" aria-live="polite"></span></div>
+        <div class="campo"><label for="op-email" data-i18n="t.e-mail">E-mail</label><input id="op-email" name="email" type="email" autocomplete="email" required data-erro="Escreva um e-mail válido, ex: nome@gmail.com." data-i18n-attr="data-erro:attr.escreva-um-e-mail-valido-ex"><span class="erro" aria-live="polite"></span></div>
       </div>
       <input type="hidden" name="_replyto" class="replyto">
-      <fieldset class="campo"><legend>Tipo</legend><div class="tipos">
-        <label><input type="radio" name="tipo" value="Sugestão" checked> Sugestão</label><label><input type="radio" name="tipo" value="Crítica"> Crítica</label><label><input type="radio" name="tipo" value="Outro"> Outro</label>
+      <fieldset class="campo"><legend data-i18n="t.tipo">Tipo</legend><div class="tipos">
+        <label><input type="radio" name="tipo" value="Sugestão" checked> <span data-i18n="t.sugestao">Sugestão</span></label><label><input type="radio" name="tipo" value="Crítica"> <span data-i18n="t.critica">Crítica</span></label><label><input type="radio" name="tipo" value="Outro"> <span data-i18n="t.outro">Outro</span></label>
       </div></fieldset>
-      <div class="campo"><label for="op-msg">Mensagem</label><textarea id="op-msg" name="mensagem" required minlength="5" data-erro="Escreva a sua mensagem."></textarea><span class="erro" aria-live="polite"></span></div>
-      <button class="btn btn-azul" type="submit">Enviar</button>
+      <div class="campo"><label for="op-msg" data-i18n="t.mensagem">Mensagem</label><textarea id="op-msg" name="mensagem" required minlength="5" data-erro="Escreva a sua mensagem." data-i18n-attr="data-erro:attr.escreva-a-sua-mensagem"></textarea><span class="erro" aria-live="polite"></span></div>
+      <button class="btn btn-azul" type="submit" data-i18n="t.enviar">Enviar</button>
     </form>
     <div class="lado">
-      <h3>Mais fácil pelo WhatsApp?</h3>
-      <p>Manda áudio, foto do job ou texto. Do jeito que for melhor pra você.</p>
-      <div class="acoes"><a class="btn btn-wa" href="https://wa.me/15082801573?text=Ol%C3%A1%21%20Vim%20pelo%20Painter%20Channel%20Plus%20%28painterchannel.com%29.%20Meu%20nome%3A%20___%20.%20Minha%20sugest%C3%A3o%20ou%20cr%C3%ADtica%3A%20___" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2-.2-.2-.4-.3Z"/></svg>Mande sua dica ou crítica pelo WhatsApp</a></div>
+      <h3 data-i18n="t.mais-facil-pelo-whatsapp">Mais fácil pelo WhatsApp?</h3>
+      <p data-i18n="t.manda-audio-foto-do-job-ou">Manda áudio, foto do job ou texto. Do jeito que for melhor pra você.</p>
+      <div class="acoes"><a class="btn btn-wa" href="https://wa.me/15082801573?text=Ol%C3%A1%21%20Vim%20pelo%20Painter%20Channel%20Plus%20%28painterchannel.com%29.%20Meu%20nome%3A%20___%20.%20Minha%20sugest%C3%A3o%20ou%20cr%C3%ADtica%3A%20___" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2-.2-.2-.4-.3Z"/></svg><span data-i18n="t.mande-sua-dica-ou-critica-pelo">Mande sua dica ou crítica pelo WhatsApp</span></a></div>
     </div>
   </div>
 </div></section><section class="secao receber" id="receber" aria-labelledby="t-rec"><div class="wrap">
   <div class="rec-grade">
-    <div class="secao-cab"><h2 id="t-rec">Dicas novas no seu e-mail.</h2><p class="medida">Foto de job, o que eu faço e por quê. Curto, em português. Você sai quando quiser e o seu contato não é passado pra ninguém.</p></div>
-    <form class="valida" action="https://formsubmit.co/hyannishp@gmail.com" method="POST" novalidate aria-label="Receber por e-mail">
-      <input type="hidden" name="_subject" value="[Painter Channel Plus] Cadastro"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://painterchannel.com/obrigado.html"><div class="pote" aria-hidden="true"><label>Não preencha este campo<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
-      <div class="campo"><label for="rc-nome">Nome</label><input id="rc-nome" name="nome" type="text" autocomplete="name" required data-erro="Escreva o seu nome."><span class="erro" aria-live="polite"></span></div>
-      <div class="campo"><label for="rc-email">E-mail</label><input id="rc-email" name="email" type="email" autocomplete="email" required data-erro="Escreva um e-mail válido, ex: nome@gmail.com."><span class="erro" aria-live="polite"></span></div>
+    <div class="secao-cab"><h2 id="t-rec" data-i18n="t.dicas-novas-no-seu-e-mail">Dicas novas no seu e-mail.</h2><p class="medida" data-i18n="t.foto-de-job-o-que-eu">Foto de job, o que eu faço e por quê. Curto, em português. Você sai quando quiser e o seu contato não é passado pra ninguém.</p></div>
+    <form class="valida" action="https://formsubmit.co/hyannishp@gmail.com" method="POST" novalidate aria-label="Receber por e-mail" data-i18n-attr="aria-label:t.receber-por-e-mail">
+      <input type="hidden" name="_subject" value="[Painter Channel Plus] Cadastro"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://painterchannel.com/obrigado.html"><div class="pote" aria-hidden="true"><label><span data-i18n="t.nao-preencha-este-campo">Não preencha este campo</span><input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+      <div class="campo"><label for="rc-nome" data-i18n="t.nome">Nome</label><input id="rc-nome" name="nome" type="text" autocomplete="name" required data-erro="Escreva o seu nome." data-i18n-attr="data-erro:attr.escreva-o-seu-nome"><span class="erro" aria-live="polite"></span></div>
+      <div class="campo"><label for="rc-email" data-i18n="t.e-mail">E-mail</label><input id="rc-email" name="email" type="email" autocomplete="email" required data-erro="Escreva um e-mail válido, ex: nome@gmail.com." data-i18n-attr="data-erro:attr.escreva-um-e-mail-valido-ex"><span class="erro" aria-live="polite"></span></div>
       <input type="hidden" name="_replyto" class="replyto">
-      <div class="campo"><label for="rc-oficio">Seu ofício</label><select id="rc-oficio" name="oficio" required data-erro="Escolha o seu ofício.">
-        <option value="">Escolha</option><option>Pintura</option><option>Carpintaria e acabamento</option><option>Drywall</option><option>Siding e telhado</option><option>Piso e azulejo</option><option>Reforma e handyman</option><option>Outro</option>
+      <div class="campo"><label for="rc-oficio" data-i18n="t.seu-oficio">Seu ofício</label><select id="rc-oficio" name="oficio" required data-erro="Escolha o seu ofício." data-i18n-attr="data-erro:attr.escolha-o-seu-oficio">
+        <option value="" data-i18n="t.escolha">Escolha</option><option data-i18n="t.pintura">Pintura</option><option data-i18n="t.carpintaria-e-acabamento">Carpintaria e acabamento</option><option data-i18n="t.drywall">Drywall</option><option data-i18n="t.siding-e-telhado">Siding e telhado</option><option data-i18n="t.piso-e-azulejo">Piso e azulejo</option><option data-i18n="t.reforma-e-handyman">Reforma e handyman</option><option data-i18n="t.outro">Outro</option>
       </select><span class="erro" aria-live="polite"></span></div>
-      <button class="btn btn-azul" type="submit">Quero receber</button>
+      <button class="btn btn-azul" type="submit" data-i18n="t.quero-receber">Quero receber</button>
     </form>
   </div>
 </div></section></main>
 <footer><div class="wrap">
   <a class="lockup pq" href="index.html" aria-label="Painter Channel Plus, página inicial"><img class="lk-sim lk-circ" src="fotos/logo-pc-circulo-128.png" srcset="fotos/logo-pc-circulo-128.png 1x, fotos/logo-pc-circulo-192.png 1.5x" alt="" width="128" height="128"><span class="lk-txt" aria-hidden="true"><span class="lk-1">Painter</span><span class="lk-2">Channel<span class="lk-plus">Plus</span></span></span></a>
-  <p style="margin-top:1rem;max-width:44ch">Dica de pintor pra pintor. Do Brasil pra quem trabalha com casa nos Estados Unidos.</p>
-  <nav aria-label="Rodapé"><a href="mural.html">Mural dos Pintores</a><a href="dicas.html">Dicas e perguntas</a><a href="dicas.html#pergunta">Mande sua pergunta</a><a href="contato.html#receber">Receber por e-mail</a><a href="contato.html#fale">Contato</a><a href="apoio.html">Empresas que apoiam</a></nav>
-  <nav class="legal" aria-label="Avisos"><a href="privacidade.html">Política de privacidade</a><a href="aviso.html">Dicas, não orientação profissional</a></nav>
+  <p style="margin-top:1rem;max-width:44ch" data-i18n="t.dica-de-pintor-pra-pintor-do">Dica de pintor pra pintor. Do Brasil pra quem trabalha com casa nos Estados Unidos.</p>
+  <nav aria-label="Rodapé" data-i18n-attr="aria-label:attr.rodape"><a href="mural.html" data-i18n="t.mural-dos-pintores">Mural dos Pintores</a><a href="dicas.html" data-i18n="t.dicas-e-perguntas">Dicas e perguntas</a><a href="dicas.html#pergunta" data-i18n="t.mande-sua-pergunta">Mande sua pergunta</a><a href="contato.html#receber" data-i18n="t.receber-por-e-mail">Receber por e-mail</a><a href="contato.html#fale" data-i18n="t.contato">Contato</a><a href="apoio.html" data-i18n="t.empresas-que-apoiam">Empresas que apoiam</a></nav>
+  <nav class="legal" aria-label="Avisos" data-i18n-attr="aria-label:attr.avisos"><a href="privacidade.html" data-i18n="t.politica-de-privacidade-2">Política de privacidade</a><a href="aviso.html" data-i18n="t.dicas-nao-orientacao-profissional">Dicas, não orientação profissional</a></nav>
   <!-- REDES DO CANAL: YouTube e Instagram ainda não existem. Quando existirem, ligar em site.js (objeto REDES) ou colocar os links aqui. -->
   <div class="fim"><span>© 2026 Roberto Franco · Painter Channel Plus</span><span class="selo">Painter Channel Plus</span></div>
 </div></footer>
