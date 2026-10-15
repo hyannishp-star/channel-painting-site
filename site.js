@@ -81,11 +81,12 @@ function app() {
       [T('t.trim-podre','Trim podre'), 'dicas.html#cat-trim'], [T('t.troca-de-madeira','Troca de madeira'), 'dicas.html#cat-troca'],
       [T('t.casa-pintada','Casa pintada'), 'dicas.html#cat-casa'], [T('t.erros-comuns','Erros comuns'), 'dicas.html#cat-erros'],
       [T('t.projetos-de-pintores','Projetos de pintores'), 'dicas.html#cat-projetos'], [T('t.antes-e-depois','Antes e depois'), 'dicas.html#antes-depois'],
-      [T('t.mande-sua-pergunta','Mande sua pergunta'), 'dicas.html#pergunta', '', 'forte'], [T('t.perguntas-frequentes','Perguntas frequentes'), 'dicas.html#perguntas', '', 'forte'] ] },
+      [T('js.menu.episodios','Episódios'), 'dicas.html#episodios', T('js.menu.episodios-sub','Primeiros em produção'), 'forte'], [T('t.mande-sua-pergunta','Mande sua pergunta'), 'dicas.html#pergunta', '', ''], [T('t.perguntas-frequentes','Perguntas frequentes'), 'dicas.html#perguntas', '', 'forte'] ] },
     { rot: 'Contact', pag: 'contato.html', itens: [
       [T('t.sua-opiniao','Sua opinião'), 'contato.html#fale', T('js.menu.opiniao-sub','Sugestão ou crítica')],
       ['WhatsApp', WHATSAPP, T('js.menu.whatsapp-sub','Áudio, foto ou texto'), 'externo'],
       [T('t.receber-por-e-mail','Receber por e-mail'), 'contato.html#receber', T('js.menu.receber-sub','Dicas novas no seu e-mail')],
+      [T('js.menu.tabela','Tabela grátis'), 'contato.html#tabela', T('js.menu.tabela-sub','Produto × superfície')],
       ['Supporters', 'apoio.html', T('js.menu.apoio-sub','Empresas que apoiam o canal'), 'forte'] ] }
   ];
   var menuNav = document.querySelector('.nav .menu');
