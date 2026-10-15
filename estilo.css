@@ -443,6 +443,7 @@ header.nav.rolou,header.nav.menu-aberto{background:rgba(243,242,238,.94);backdro
 .duvida-q{font:900 6rem/.8 Archivo,sans-serif;font-variation-settings:"wdth" 75;color:var(--ambar);transform:rotate(-4deg);text-shadow:0 3px 0 #9A6400}
 .duvida h2{color:#fff;font-size:clamp(1.75rem,4.5vw,2.5rem);line-height:1;font-variation-settings:"wdth" 80}
 .duvida p{margin-top:.6rem;color:#C3CAD1;max-width:52ch}
+.duvida .duvida-esp{margin-top:.5rem;max-width:62ch;text-wrap:balance;color:var(--ambar);font-weight:700}
 .duvida .acoes{margin-top:1.25rem}
 .duvida .btn-linha{border-color:#E9ECEF;color:#E9ECEF}.duvida .btn-linha:hover{background:#E9ECEF;color:var(--grafite)}
 .duvida :focus-visible{outline-color:#9CC2F2}
