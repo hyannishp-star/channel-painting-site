@@ -1,7 +1,7 @@
-// Painting Channel Plus · nav, comparador, ampliação e validação dos formulários
+// Painter Channel Plus · nav, comparador, ampliação e validação dos formulários
 (function () {
   // MENU: fonte única da navegação de todas as páginas (o HTML só tem 3 links de reserva sem JavaScript)
-  var WHATSAPP = 'https://wa.me/15082801573?text=' + encodeURIComponent('Olá! Vim pelo Painting Channel Plus (paintingchannel.com). Meu nome: ___ . Minha sugestão ou crítica: ___');
+  var WHATSAPP = 'https://wa.me/15082801573?text=' + encodeURIComponent('Olá! Vim pelo Painter Channel Plus (painterchannel.com). Meu nome: ___ . Minha sugestão ou crítica: ___');
   var MENU = [
     { rot: 'Painters', pag: 'mural.html', itens: [
       ['Mural dos Pintores', 'mural.html', 'Veja o trabalho de outros pintores'],
@@ -14,7 +14,7 @@
     { rot: 'Contact', pag: 'contato.html', itens: [
       ['Sua opinião', 'contato.html#fale', 'Sugestão ou crítica'],
       ['WhatsApp', WHATSAPP, 'Áudio, foto ou texto', 'externo'],
-      ['Receber por e-mail', 'contato.html#receber', 'Uma dica por semana'] ] }
+      ['Receber por e-mail', 'contato.html#receber', 'Dicas novas no seu e-mail'] ] }
   ];
   var menuNav = document.querySelector('.nav .menu');
   if (menuNav) {
