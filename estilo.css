@@ -484,11 +484,15 @@ footer .lockup.pq .lk-sim.lk-circ{width:64px;height:64px}
 .idiomas button:hover{color:var(--grafite);border-color:rgba(30,35,41,.25)}
 .idiomas button[aria-pressed="true"]{background:var(--grafite);color:#fff}
 .idiomas-sep{color:var(--prata)}
+.idiomas{flex-wrap:wrap;justify-content:center;row-gap:2px}
+.idiomas-tit{flex:0 0 100%;text-align:center;font:600 .75rem/1.2 "Public Sans",sans-serif;color:var(--texto-2);white-space:nowrap}
 .idiomas-menu{display:none}
 @media(max-width:899px){
   .nav .wrap>.idiomas{margin-left:.35rem}
   .idiomas-menu{display:block;padding:.75rem .25rem .25rem;border-top:1px solid rgba(168,176,183,.45)}
-  .idiomas-menu .idiomas{margin:0}
+  .idiomas-menu .idiomas{margin:0;justify-content:flex-start}
+  .idiomas-menu .idiomas-tit{text-align:left;font-size:.875rem;margin-bottom:.35rem}
+  .nav .wrap>.idiomas .idiomas-tit{display:none}
   .idiomas-menu .idiomas button{min-width:48px;min-height:44px;font-size:.9375rem}
 }
 @media(max-width:419px){.nav .wrap>.idiomas button{min-width:30px;padding:0 .2rem}.nav .wrap>.idiomas .idiomas-sep{display:none}.nav .wrap{gap:.4rem}}

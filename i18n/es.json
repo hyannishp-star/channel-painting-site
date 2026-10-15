@@ -375,5 +375,6 @@
  "t.viu-algo-que-voce-faz-diferente": "¿Viste algo que tú haces diferente? <a href=\"contato.html#fale\">Cuéntanos</a>. No estar de acuerdo es parte de esto.",
  "t.voces-abrem-a-llc-pra-mim": "¿Ustedes me abren la LLC?",
  "t.voces-respondem-toda-pergunta": "¿Responden todas las preguntas?",
- "t.voltar-ao-inicio": "Volver al inicio"
+ "t.voltar-ao-inicio": "Volver al inicio",
+ "js.idioma-pergunta": "¿Cuál es tu idioma preferido?"
 }
