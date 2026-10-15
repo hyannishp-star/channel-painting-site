@@ -422,3 +422,13 @@ header.nav.rolou,header.nav.menu-aberto{background:rgba(243,242,238,.94);backdro
   text-shadow:0 3px 0 #9A6400,0 14px 28px rgba(15,18,22,.45);transform:rotate(-4deg);transition:transform .3s ease}
 .porta a:hover .q{transform:rotate(2deg) scale(1.04)}
 @media(min-width:900px){.q{font-size:12rem}}
+
+/* ===== Logo novo aprovado (PC+ 3D, 15/out/2026) ===== */
+.logo-novo{display:block;height:auto;max-width:100%}
+.circulo{overflow:hidden}
+.logo-ci{width:85%;margin:0 auto}
+.logo-md{width:260px}
+@media(min-width:960px){.logo-md{width:330px}}
+.obrigado .ob-placa{padding:10px}
+.lockup.pq .lk-sim{width:58px;height:auto;border-radius:3px}
+.circulo{background:radial-gradient(75% 75% at 50% 42%,#2B2F34 0%,#1F2226 60%,#17191C 100%)}
