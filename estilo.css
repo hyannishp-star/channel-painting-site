@@ -465,3 +465,15 @@ header.nav.rolou,header.nav.menu-aberto{background:rgba(243,242,238,.94);backdro
 footer nav.legal{margin-top:0;font-size:.875rem}
 footer nav.legal a{color:#AEB6BE}
 .aceite a{color:var(--azul)}
+
+/* ===== Logo sempre em círculo (Roberto 15/out/2026) ===== */
+.lockup.pq,footer .lockup.pq{background:transparent;padding:0;border-radius:0;gap:.6rem;align-items:center}
+.lockup.pq .lk-sim.lk-circ{width:48px;height:48px;border-radius:50%;box-shadow:0 0 0 1.5px #C9CFD5,0 3px 10px -3px rgba(15,18,22,.45)}
+footer .lockup.pq .lk-sim.lk-circ{width:64px;height:64px}
+.nav .lockup.pq .lk-txt{font-size:1.05rem}
+.nav .lk-1{background-image:linear-gradient(180deg,#9AA3AD,#5E6670 52%,#3D454D)}
+@media(max-width:419px){.nav .lockup.pq .lk-txt{display:flex;font-size:.9rem}.nav .lockup.pq .lk-sim.lk-circ{width:40px;height:40px}}
+.topo-placa{background:transparent}
+.logo-md{border-radius:50%;box-shadow:0 0 0 6px var(--primer),0 0 0 9px var(--prata),0 24px 50px -18px rgba(30,35,41,.55)}
+.obrigado .ob-placa{padding:0;background:transparent}
+.logo-ci{width:100%}
