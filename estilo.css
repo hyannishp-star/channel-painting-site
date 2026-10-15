@@ -603,21 +603,21 @@ footer .lockup.pq .lk-sim.lk-circ{width:64px;height:64px}
 
 /* ===== Portal: abas laterais (Roberto 15/out/2026): esquerda Problemas comuns, direita Sobre o canal ===== */
 .leque5-tit{text-align:center;font-size:clamp(1.75rem,4vw,2.5rem);line-height:1;font-variation-settings:"wdth" 80;margin-bottom:.5rem}
-.lados{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;padding:0 var(--pad) 2.5rem;background:var(--primer)}
-.lado{display:inline-flex;align-items:center;gap:.55rem;min-height:48px;padding:.6rem 1.1rem;font:800 1rem/1.1 Archivo,sans-serif;font-variation-settings:"wdth" 86;text-decoration:none;color:#fff;box-shadow:0 14px 28px -16px rgba(30,35,41,.6);transition:transform .2s,box-shadow .2s}
-.lado-esq{background:var(--grafite);border-left:6px solid var(--ambar)}
-.lado-esq .lado-ic{color:var(--ambar)}
-.lado-dir{background:var(--azul);border-right:6px solid var(--ambar)}
-.lado:hover{box-shadow:0 18px 34px -16px rgba(30,35,41,.7)}
-.lado:focus-visible{outline:3px solid var(--ambar);outline-offset:3px}
-.lado-ic{display:grid;place-items:center;flex:none}
-@media(max-width:899px){.lado{min-width:240px;justify-content:center}}
+.atalhos{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;padding:0 var(--pad) 2.5rem;background:var(--primer)}
+.atalho{display:inline-flex;align-items:center;gap:.55rem;min-height:48px;padding:.6rem 1.1rem;font:800 1rem/1.1 Archivo,sans-serif;font-variation-settings:"wdth" 86;text-decoration:none;color:#fff;box-shadow:0 14px 28px -16px rgba(30,35,41,.6);transition:transform .2s,box-shadow .2s}
+.atalho-esq{background:var(--grafite);border-left:6px solid var(--ambar)}
+.atalho-esq .atalho-ic{color:var(--ambar)}
+.atalho-dir{background:var(--azul);border-right:6px solid var(--ambar)}
+.atalho:hover{box-shadow:0 18px 34px -16px rgba(30,35,41,.7)}
+.atalho:focus-visible{outline:3px solid var(--ambar);outline-offset:3px}
+.atalho-ic{display:grid;place-items:center;flex:none}
+@media(max-width:899px){.atalho{min-width:240px;justify-content:center}}
 @media(min-width:900px){
-  .lados{display:block;padding:0}
-  .lado{position:fixed;top:50%;z-index:40;transform:translateY(-50%);flex-direction:column;gap:.5rem;padding:1rem .7rem;min-height:0;max-width:96px;text-align:center;font-size:.9375rem}
-  .lado-esq{left:0;border-radius:0 6px 6px 0}
-  .lado-dir{right:0;border-radius:6px 0 0 6px}
-  .lado-esq:hover{transform:translateY(-50%) translateX(4px)}
-  .lado-dir:hover{transform:translateY(-50%) translateX(-4px)}
+  .atalhos{display:block;padding:0}
+  .atalho{position:fixed;top:50%;z-index:40;transform:translateY(-50%);flex-direction:column;gap:.5rem;padding:1rem .7rem;min-height:0;max-width:96px;text-align:center;font-size:.9375rem}
+  .atalho-esq{left:0;border-radius:0 6px 6px 0}
+  .atalho-dir{right:0;border-radius:6px 0 0 6px}
+  .atalho-esq:hover{transform:translateY(-50%) translateX(4px)}
+  .atalho-dir:hover{transform:translateY(-50%) translateX(-4px)}
 }
 @media(min-width:900px) and (max-width:1260px){.portal-in{padding-left:112px;padding-right:112px}.portas{gap:28px}}
