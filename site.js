@@ -32,7 +32,7 @@
     document.querySelectorAll('form.valida').forEach(function (f) { f.appendChild(idioma.cloneNode()); });
   }
   function seletor() {
-    var tit = T('js.idioma-pergunta', 'Qual o seu idioma preferido?');
+    var tit = T('js.idioma-pergunta', 'Idioma preferido?');
     var h = '<div class="idiomas" role="group" aria-label="' + tit + '"><span class="idiomas-tit" aria-hidden="true">' + tit + '</span>';
     ['pt', 'en', 'es'].forEach(function (l, i) {
       h += (i ? '<span class="idiomas-sep" aria-hidden="true">·</span>' : '') + '<button type="button" lang="' + IDIOMAS[l].html + '" data-lang="' + l + '" aria-pressed="' + (l === LANG) + '" aria-label="' + IDIOMAS[l].nome + '">' + IDIOMAS[l].rot + '</button>';
