@@ -78,6 +78,9 @@ function app() {
   document.querySelectorAll('.js-email').forEach(function (a) { a.href = 'mailto:' + EMAIL_CANAL + '?subject=' + encodeURIComponent(T('js.email-assunto','Dúvida pelo Painter Channel Plus')); });
   var WHATSAPP = 'https://wa.me/15082801573?text=' + encodeURIComponent(T('js.whatsapp','Olá! Vim pelo Painter Channel Plus (painterchannel.com). Meu nome: ___ . Minha sugestão ou crítica: ___'));
   var MENU = [
+    { rot: 'About', pag: 'sobre.html', itens: [
+      [T('js.menu.sobre','Sobre o canal'), 'sobre.html', T('js.menu.sobre-sub','Quem somos e pra quem é')],
+      [T('js.menu.quem','Quem está por trás'), 'sobre.html#quem'], [T('js.menu.pilares','Os 4 pilares'), 'sobre.html#pilares'], [T('js.menu.pra-quem','Pra quem é'), 'sobre.html#pra-quem'] ] },
     { rot: 'Painters', pag: 'mural.html', itens: [
       [T('js.menu.mural','Mural dos Pintores'), 'mural.html', T('js.menu.mural-sub','Veja o trabalho de outros pintores')],
       [T('js.menu.mostrar','Mostrar meu trabalho'), 'mural.html#enviar', T('js.menu.mostrar-sub','Mande a foto do seu projeto')] ] },
