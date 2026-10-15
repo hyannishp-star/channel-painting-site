@@ -78,9 +78,10 @@ function app() {
   document.querySelectorAll('.js-email').forEach(function (a) { a.href = 'mailto:' + EMAIL_CANAL + '?subject=' + encodeURIComponent(T('js.email-assunto','Dúvida pelo Painter Channel Plus')); });
   var WHATSAPP = 'https://wa.me/15082801573?text=' + encodeURIComponent(T('js.whatsapp','Olá! Vim pelo Painter Channel Plus (painterchannel.com). Meu nome: ___ . Minha sugestão ou crítica: ___'));
   var MENU = [
-    { rot: 'Painters', pag: 'mural.html', itens: [
+    { rot: T('js.menu.mural-prof','Mural do Profissional'), pag: 'mural.html', itens: [
       [T('js.menu.mural','Mural dos Pintores'), 'mural.html', T('js.menu.mural-sub','Veja o trabalho de outros pintores')],
       [T('js.menu.mostrar','Mostrar meu trabalho'), 'mural.html#enviar', T('js.menu.mostrar-sub','Mande a foto do seu projeto')] ] },
+    { rot: 'Supporters', pag: 'apoio.html', link: true },
     { rot: 'Questions', pag: 'dicas.html', itens: [
       [T('t.trim-podre','Trim podre'), 'dicas.html#cat-trim'], [T('t.troca-de-madeira','Troca de madeira'), 'dicas.html#cat-troca'],
       [T('t.casa-pintada','Casa pintada'), 'dicas.html#cat-casa'], [T('t.erros-comuns','Erros comuns'), 'dicas.html#cat-erros'],
@@ -98,6 +99,7 @@ function app() {
     var aqui = (location.pathname.split('/').pop() || 'index.html');
     var html = '<button class="hamb" type="button" aria-expanded="false" aria-controls="menu-lista"><span class="hamb-ic" aria-hidden="true"><i></i><i></i><i></i></span><span class="hamb-txt">' + T('js.menu','Menu') + '</span></button><ul class="menu-lista" id="menu-lista">';
     MENU.forEach(function (g, i) {
+      if (g.link) { html += '<li class="grupo-link' + (g.pag === aqui ? ' atual' : '') + '"><a class="grupo-btn" href="' + g.pag + '"' + (g.pag === aqui ? ' aria-current="page"' : '') + '>' + g.rot + '</a></li>'; return; } // link direto, sem submenu
       html += '<li class="grupo' + (g.pag === aqui ? ' atual' : '') + '"><button class="grupo-btn" type="button" aria-expanded="false" aria-controls="sub-' + i + '"' + (g.pag === aqui ? ' aria-current="page"' : '') + '>' + g.rot + '<span class="seta" aria-hidden="true"></span></button><ul class="sub" id="sub-' + i + '">';
       g.itens.forEach(function (it) {
         var ext = it[3] === 'externo';
