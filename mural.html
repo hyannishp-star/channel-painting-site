@@ -65,6 +65,7 @@
       <div class="campo"><label for="m-txt">Sobre a sua empresa</label><textarea id="m-txt" name="sobre_a_empresa" maxlength="300" required data-erro="Escreva um texto curto sobre a empresa." aria-describedby="m-txt-cont"></textarea><small id="m-txt-cont" class="contador" aria-live="polite">0 de 300 caracteres</small><span class="erro" aria-live="polite"></span></div>
       <div class="campo"><label for="m-foto">Foto do projeto</label><input id="m-foto" name="foto" type="file" accept="image/jpeg,image/png" required data-max="8388608" data-erro="Escolha uma foto JPG ou PNG de até 8 MB."><small>Uma foto só, JPG ou PNG, até 8 MB. Projeto seu, de pintura ou de casa.</small><span class="erro" aria-live="polite"></span></div>
       <div class="campo"><label class="aceite"><input type="checkbox" name="autorizacao" value="Autorizo a publicação e confirmo que a foto é minha" required data-erro="Marque a autorização pra gente poder publicar."> <span>Autorizo a publicação e confirmo que a foto é minha.</span></label><span class="erro" aria-live="polite"></span></div>
+      <div class="campo"><label class="aceite"><input type="checkbox" name="privacidade" value="Li a política de privacidade" required data-erro="Marque que leu a política de privacidade."> <span>Li a <a href="privacidade.html" target="_blank">política de privacidade</a>.</span></label><span class="erro" aria-live="polite"></span></div>
       <button class="btn btn-azul" type="submit">Enviar para aprovação</button>
     </form>
     <div class="lado" id="regras">
@@ -84,7 +85,8 @@
 <footer><div class="wrap">
   <a class="lockup pq" href="index.html" aria-label="Painter Channel Plus, página inicial"><img class="lk-sim" src="fotos/logo-painter-mono-176.png" alt="" width="176" height="135"><span class="lk-txt" aria-hidden="true"><span class="lk-1">Painter</span><span class="lk-2">Channel<span class="lk-plus">Plus</span></span></span></a>
   <p style="margin-top:1rem;max-width:44ch">Dica de pintor pra pintor. Do Brasil pra quem trabalha com casa nos Estados Unidos.</p>
-  <nav aria-label="Rodapé"><a href="mural.html">Mural dos Pintores</a><a href="dicas.html">Dicas e perguntas</a><a href="dicas.html#pergunta">Mande sua pergunta</a><a href="contato.html#receber">Receber por e-mail</a><a href="contato.html#fale">Contato</a></nav>
+  <nav aria-label="Rodapé"><a href="mural.html">Mural dos Pintores</a><a href="dicas.html">Dicas e perguntas</a><a href="dicas.html#pergunta">Mande sua pergunta</a><a href="contato.html#receber">Receber por e-mail</a><a href="contato.html#fale">Contato</a><a href="apoio.html">Empresas que apoiam</a></nav>
+  <nav class="legal" aria-label="Avisos"><a href="privacidade.html">Política de privacidade</a><a href="aviso.html">Dicas, não orientação profissional</a></nav>
   <!-- REDES DO CANAL: YouTube e Instagram ainda não existem. Quando existirem, ligar em site.js (objeto REDES) ou colocar os links aqui. -->
   <div class="fim"><span>© 2026 Roberto Franco · Painter Channel Plus</span><span class="selo">Painter Channel Plus</span></div>
 </div></footer>

@@ -1,6 +1,9 @@
 // Painter Channel Plus · nav, comparador, ampliação e validação dos formulários
 (function () {
   // MENU: fonte única da navegação de todas as páginas (o HTML só tem 3 links de reserva sem JavaScript)
+  // E-MAIL DO CANAL: ponto único. A caixa ainda não existe; o endereço não aparece escrito no site.
+  var EMAIL_CANAL = 'contato@painterchannel.com';
+  document.querySelectorAll('.js-email').forEach(function (a) { a.href = 'mailto:' + EMAIL_CANAL + '?subject=' + encodeURIComponent('Dúvida pelo Painter Channel Plus'); });
   var WHATSAPP = 'https://wa.me/15082801573?text=' + encodeURIComponent('Olá! Vim pelo Painter Channel Plus (painterchannel.com). Meu nome: ___ . Minha sugestão ou crítica: ___');
   var MENU = [
     { rot: 'Painters', pag: 'mural.html', itens: [
@@ -14,7 +17,8 @@
     { rot: 'Contact', pag: 'contato.html', itens: [
       ['Sua opinião', 'contato.html#fale', 'Sugestão ou crítica'],
       ['WhatsApp', WHATSAPP, 'Áudio, foto ou texto', 'externo'],
-      ['Receber por e-mail', 'contato.html#receber', 'Dicas novas no seu e-mail'] ] }
+      ['Receber por e-mail', 'contato.html#receber', 'Dicas novas no seu e-mail'],
+      ['Supporters', 'apoio.html', 'Empresas que apoiam o canal', 'forte'] ] }
   ];
   var menuNav = document.querySelector('.nav .menu');
   if (menuNav) {
